@@ -1,3 +1,7 @@
+
+
+
+
 # Gather Mute Shortcut
 
 This chrome extension allows you to use shortcuts to controlling the mic on/off
@@ -7,4 +11,6 @@ This chrome extension allows you to use shortcuts to controlling the mic on/off
 | Ctrl/Cmd + D    | Toggle Mic                   |
 | Space           | Un-mute while pressing space |
 
-![](https://www.youtube.com/watch?v=a1TFK_PiUdg)
+[Demo on YouTube](https://www.youtube.com/watch?v=a1TFK_PiUdg)
+
+
