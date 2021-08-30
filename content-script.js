@@ -6,7 +6,8 @@
   }
   const getAudioButton = () => {
     return document.querySelector('.GameVideo-self-video-container button')
-      ||  document.querySelector('.GameCanvasContainer-main button')
+      || document.querySelector('.GameVideosContainer-videobar-content button')
+      || document.querySelector('.GameCanvasContainer-main button')
   }
 
   window.addEventListener('keydown', (e) => {
