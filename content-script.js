@@ -15,6 +15,9 @@
       return
     }
     const audioBtn = getAudioButton()
+    if (!audioBtn) {
+      return
+    }
     const isMute = getIsMute();
     if (!e.repeat) {
       if (e.key === ' ') {
@@ -26,7 +29,7 @@
       }
     }
 
-    if (e.key.toUpperCase() === 'D' && isMac ? e.metaKey : e.ctrlKey) {
+    if (e.key.toUpperCase() === 'D' && (isMac ? e.metaKey : e.ctrlKey)) {
       e.stopPropagation()
       e.preventDefault();
       audioBtn.click()
@@ -41,6 +44,9 @@
       e.stopPropagation()
       e.preventDefault();
       const audioBtn = getAudioButton()
+      if (!audioBtn) {
+        return
+      }
       const isMute = getIsMute();
       if (!isMute) {
         audioBtn.click()

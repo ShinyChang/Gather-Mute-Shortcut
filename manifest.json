@@ -1,11 +1,11 @@
 {
   "name": "Gather Mute Shortcut",
   "description": "Press SPACE to talk and Command+D to toggle mute",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "manifest_version": 3,
   "content_scripts": [
     {
-      "matches": ["https://gather.town/app/*"],
+      "matches": ["https://gather.town/*"],
       "js": ["content-script.js"]
     }
   ]
