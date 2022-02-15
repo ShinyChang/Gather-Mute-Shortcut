@@ -29,7 +29,7 @@
       }
     }
 
-    if (e.key.toUpperCase() === 'D' && (isMac ? e.metaKey : e.ctrlKey)) {
+    if (e.key.toUpperCase() === 'A' && e.shiftKey && (isMac ? e.metaKey : e.ctrlKey)) {
       e.stopPropagation()
       e.preventDefault();
       audioBtn.click()
