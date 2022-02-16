@@ -1,4 +1,12 @@
 ;(() => {
+  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+      const audioBtn = getAudioButton()
+      if (!audioBtn) {
+        return
+      }
+      audioBtn.click()
+  });
+
   const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
   const getIsMute = () => {
     const key = `${window.location.pathname.split('/').slice(2).join("\\")}/audioMuteClicked`
@@ -27,12 +35,6 @@
           audioBtn.click()
         }
       }
-    }
-
-    if (e.key.toUpperCase() === 'A' && e.shiftKey && (isMac ? e.metaKey : e.ctrlKey)) {
-      e.stopPropagation()
-      e.preventDefault();
-      audioBtn.click()
     }
   }, {capture: true})
 
